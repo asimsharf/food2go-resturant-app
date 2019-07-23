@@ -1,0 +1,38 @@
+name: resturant
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  font_awesome_flutter: ^8.4.0
+  google_fonts_arabic: ^1.1.7
+  cupertino_icons: ^0.1.2
+  http: ^0.12.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/web_hi_res_512.png
+    - assets/avatar_person.png
+    - assets/drawerbg.jpg
+
+
+  fonts:
+    - family: Amiri
+      fonts:
+      - asset: assets/fonts/Amiri-Bold.ttf
+      - asset: assets/fonts/Amiri-BoldItalic.ttf
+      - asset: assets/fonts/Amiri-Italic.ttf
+      - asset: assets/fonts/Amiri-Regular.ttf
