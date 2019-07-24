@@ -46,149 +46,13 @@ class _HomeState extends State<Home> {
             ),
           ),
           //New Orders
-          new Container(
-            height: 60.0,
-            child: new InkWell(
-              splashColor: Colors.deepOrange,
-              onTap: () {
-                Navigator.of(context).pushNamed('/OrderDetails');
-              },
-              child: new Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(2.0),
-                padding: const EdgeInsets.all(10.0),
-                decoration: new BoxDecoration(
-                  border: new Border.all(
-                    width: 1.0,
-                    color: Colors.red,
-                  ),
-                  borderRadius: new BorderRadius.all(
-                    new Radius.circular(
-                        5.0), //   ,      <--- border radius here
-                  ),
-                ),
-                child: new Text(
-                  'New Orders',
-                  style: new TextStyle(
-                    fontFamily: ArabicFonts.Cairo,
-                    package: 'google_fonts_arabic',
-                    color: Colors.red,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.3,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          _newOrder(),
           //pending Orders
-          new Container(
-            height: 60.0,
-            child: new InkWell(
-              splashColor: Colors.deepOrange,
-              onTap: () {
-                Navigator.of(context).pushNamed('/OrderDetails');
-              },
-              child: new Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(2.0),
-                padding: const EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  border: new Border.all(
-                    width: 1.0,
-                    color: Colors.orange,
-                  ),
-                  borderRadius: new BorderRadius.all(
-                    new Radius.circular(
-                        5.0), //   ,      <--- border radius here
-                  ),
-                ),
-                child: new Text(
-                  'pending Orders',
-                  style: new TextStyle(
-                    fontFamily: ArabicFonts.Cairo,
-                    package: 'google_fonts_arabic',
-                    color: Colors.orange,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.3,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          _pendingOrder(),
           //Ready Orders
-          new Container(
-            height: 60.0,
-            child: new InkWell(
-              splashColor: Colors.deepOrange,
-              onTap: () {
-                Navigator.of(context).pushNamed('/OrderDetails');
-              },
-              child: new Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(2.0),
-                padding: const EdgeInsets.all(10.0),
-                decoration: new BoxDecoration(
-                  border: new Border.all(
-                    width: 1.0,
-                    color: Colors.blue,
-                  ),
-                  borderRadius: new BorderRadius.all(
-                    new Radius.circular(
-                        5.0), //   ,      <--- border radius here
-                  ),
-                ),
-                child: new Text(
-                  'Ready Orders',
-                  style: new TextStyle(
-                    fontFamily: ArabicFonts.Cairo,
-                    package: 'google_fonts_arabic',
-                    color: Colors.blue,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.3,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          _readyOrder(),
           //Complete Orders
-          new Container(
-            height: 60.0,
-            child: new InkWell(
-              splashColor: Colors.deepOrange,
-              onTap: () {
-                Navigator.of(context).pushNamed('/OrderDetails');
-              },
-              child: new Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(2.0),
-                padding: const EdgeInsets.all(10.0),
-                decoration: new BoxDecoration(
-                  border: new Border.all(
-                    width: 1.0,
-                    color: Colors.green,
-                  ),
-                  borderRadius: new BorderRadius.all(
-                    new Radius.circular(
-                        5.0), //   ,      <--- border radius here
-                  ),
-                ),
-                child: new Text(
-                  'Complete Orders',
-                  style: new TextStyle(
-                    fontFamily: ArabicFonts.Cairo,
-                    package: 'google_fonts_arabic',
-                    color: Colors.green,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.3,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          _completeOrder(),
         ],
       ),
       drawer: new Drawer(
@@ -505,6 +369,154 @@ class _HomeState extends State<Home> {
           ],
         ),
       )),
+    );
+  }
+
+  Widget _newOrder() {
+    return new Container(
+      height: 60.0,
+      child: new InkWell(
+        splashColor: Colors.deepOrange,
+        onTap: () {
+          Navigator.of(context).pushNamed('/OrderDetails');
+        },
+        child: new Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(2.0),
+          padding: const EdgeInsets.all(10.0),
+          decoration: new BoxDecoration(
+            border: new Border.all(
+              width: 1.0,
+              color: Colors.red,
+            ),
+            borderRadius: new BorderRadius.all(
+              new Radius.circular(5.0), //   ,      <--- border radius here
+            ),
+          ),
+          child: new Text(
+            'New Orders',
+            style: new TextStyle(
+              fontFamily: ArabicFonts.Cairo,
+              package: 'google_fonts_arabic',
+              color: Colors.red,
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _readyOrder() {
+    return new Container(
+      height: 60.0,
+      child: new InkWell(
+        splashColor: Colors.deepOrange,
+        onTap: () {
+          Navigator.of(context).pushNamed('/OrderDetails');
+        },
+        child: new Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(2.0),
+          padding: const EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            border: new Border.all(
+              width: 1.0,
+              color: Colors.orange,
+            ),
+            borderRadius: new BorderRadius.all(
+              new Radius.circular(5.0), //   ,      <--- border radius here
+            ),
+          ),
+          child: new Text(
+            'pending Orders',
+            style: new TextStyle(
+              fontFamily: ArabicFonts.Cairo,
+              package: 'google_fonts_arabic',
+              color: Colors.orange,
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _pendingOrder() {
+    return new Container(
+      height: 60.0,
+      child: new InkWell(
+        splashColor: Colors.deepOrange,
+        onTap: () {
+          Navigator.of(context).pushNamed('/OrderDetails');
+        },
+        child: new Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(2.0),
+          padding: const EdgeInsets.all(10.0),
+          decoration: new BoxDecoration(
+            border: new Border.all(
+              width: 1.0,
+              color: Colors.blue,
+            ),
+            borderRadius: new BorderRadius.all(
+              new Radius.circular(5.0), //   ,      <--- border radius here
+            ),
+          ),
+          child: new Text(
+            'Ready Orders',
+            style: new TextStyle(
+              fontFamily: ArabicFonts.Cairo,
+              package: 'google_fonts_arabic',
+              color: Colors.blue,
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _completeOrder() {
+    return new Container(
+      height: 60.0,
+      child: new InkWell(
+        splashColor: Colors.deepOrange,
+        onTap: () {
+          Navigator.of(context).pushNamed('/OrderDetails');
+        },
+        child: new Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(2.0),
+          padding: const EdgeInsets.all(10.0),
+          decoration: new BoxDecoration(
+            border: new Border.all(
+              width: 1.0,
+              color: Colors.green,
+            ),
+            borderRadius: new BorderRadius.all(
+              new Radius.circular(5.0), //   ,      <--- border radius here
+            ),
+          ),
+          child: new Text(
+            'Complete Orders',
+            style: new TextStyle(
+              fontFamily: ArabicFonts.Cairo,
+              package: 'google_fonts_arabic',
+              color: Colors.green,
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
