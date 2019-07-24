@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
             child: new InkWell(
               splashColor: Colors.deepOrange,
               onTap: () {
-                Navigator.of(context).pushNamed('/PendingOrders');
+                Navigator.of(context).pushNamed('/OrderDetails');
               },
               child: new Container(
                 alignment: Alignment.center,
@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
             child: new InkWell(
               splashColor: Colors.deepOrange,
               onTap: () {
-                Navigator.of(context).pushNamed('/ProjectApp');
+                Navigator.of(context).pushNamed('/OrderDetails');
               },
               child: new Container(
                 alignment: Alignment.center,
@@ -159,7 +159,7 @@ class _HomeState extends State<Home> {
             child: new InkWell(
               splashColor: Colors.deepOrange,
               onTap: () {
-                Navigator.of(context).pushNamed('/CompleteOrders');
+                Navigator.of(context).pushNamed('/OrderDetails');
               },
               child: new Container(
                 alignment: Alignment.center,
