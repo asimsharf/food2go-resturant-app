@@ -9,6 +9,22 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+  transparent_image: ^1.0.0
+  url_launcher: ^5.0.2
+  flutter_screenutil: ^0.4.2
+  smooth_star_rating: 1.0.2
+  flutter_swiper: ^1.1.4
+  flutter_statusbarcolor: any
+  superellipse_shape: ^0.1.5
+  flutter_speed_dial: ^1.0.8
+  google_maps_flutter: ^0.0.3+3
+  flutter_google_places: ^0.1.4
+  location: ^1.4.1
+  rflutter_alert: ^1.0.2
+  scoped_model: ^1.0.1
+  shared_preferences: ^0.5.2+1
+  json_annotation: ^2.0.0
   font_awesome_flutter: ^8.4.0
   google_fonts_arabic: ^1.1.7
   cupertino_icons: ^0.1.2
@@ -24,7 +40,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/web_hi_res_512.png
+    - assets/ic_launcher.png
     - assets/avatar_person.png
     - assets/drawerbg.jpg
 

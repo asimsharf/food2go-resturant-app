@@ -27,10 +27,23 @@ class _OrderDetailsState extends State<OrderDetails> {
           'Orders Details',
           textAlign: TextAlign.center,
           style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontFamily: ArabicFonts.Cairo,
-              package: 'google_fonts_arabic',
-              color: Colors.white),
+            fontWeight: FontWeight.bold,
+            fontFamily: ArabicFonts.Cairo,
+            package: 'google_fonts_arabic',
+            color: Colors.white,
+            shadows: <Shadow>[
+              Shadow(
+                offset: Offset(2.0, 2.0),
+                blurRadius: 3.0,
+                color: Colors.black,
+              ),
+              Shadow(
+                offset: Offset(2.0, 2.0),
+                blurRadius: 8.0,
+                color: Colors.black38,
+              ),
+            ],
+          ),
         ),
       ),
       body: new Padding(

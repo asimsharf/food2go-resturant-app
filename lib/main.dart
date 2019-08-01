@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resturant/LoginClients/pages/splash_page.dart';
 
-import 'Home.dart';
 import 'Routes.dart';
 
 void main() => runApp(App());
@@ -25,7 +25,7 @@ class _AppState extends State<App> {
               .primaryTextTheme
               .apply(bodyColor: Colors.white)),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: SplashPageLoginTow(),
       routes: Routes,
     );
   }
